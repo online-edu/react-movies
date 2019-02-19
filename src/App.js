@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import Container from 'react-bootstrap/Container';
+import { HeaderBar } from './components';
+import Movies from './movies/Movies';
 import './App.scss';
 
 const App = () => (
     <div className="App">
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-        </header>
+        <HeaderBar />
+        <Container fluid="true" className="py-4">
+            <Movies />
+        </Container>
     </div>
 );
 
