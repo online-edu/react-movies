@@ -19,20 +19,16 @@ class Movies extends Component {
 
     componentDidMount() {
         loadMovies()
-            .then(movies => {
-                this.setState({ movies });
-                console.log(movies);
-            })
+            .then(movies => this.setState({ movies }))
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }
 
     onMovieClick(id) {
         loadMovieById(id)
-            .then(movie => {
-                this.setState({ showModal: true, selectedMovie: movie });
-                console.log(movie);
-            })
+            .then(selectedMovie =>
+                this.setState({ showModal: true, selectedMovie }),
+            )
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }

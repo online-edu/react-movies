@@ -24,7 +24,7 @@ const MovieModal = ({ show, onHide, movie }) => (
         <Modal.Body>
             <Row>
                 <Col sm lg={4}>
-                    <Poster alt={movie.title} url={`${movie.poster_path}`} />
+                    <Poster name={movie.title} url={`${movie.poster_path}`} />
                 </Col>
                 <Col sm lg={8}>
                     <Row>
@@ -56,10 +56,10 @@ const MovieModal = ({ show, onHide, movie }) => (
     </Modal>
 );
 
-MovieModal.prototype = {
+MovieModal.propTypes = {
     show: PropTypes.bool.isRequired,
     onHide: PropTypes.func.isRequired,
-    movie: PropTypes.object.isRequired,
+    movie: PropTypes.shape({ title: PropTypes.string }).isRequired,
 };
 
 export default MovieModal;

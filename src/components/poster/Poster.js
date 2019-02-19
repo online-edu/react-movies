@@ -15,10 +15,16 @@ const Poster = ({ url, id, name, click }) => (
     </figure>
 );
 
+Poster.defaultProps = {
+    id: 0,
+    name: 'movie',
+    click: () => {},
+};
+
 Poster.propTypes = {
     url: PropTypes.string.isRequired,
     id: PropTypes.number,
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     click: PropTypes.func,
 };
 
