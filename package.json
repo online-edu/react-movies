@@ -37,6 +37,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@endouble.com/eslint-config-endouble": "^2.0.0" 
+    "@endouble.com/eslint-config-endouble": "^2.0.0",
+    "prop-types": "^15.7.2"
   }
 }
