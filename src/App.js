@@ -1,17 +1,16 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.scss";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import { HeaderBar } from './components';
+import Movies from './movies/Movies';
+import './App.scss';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-      </div>
-    );
-  }
-}
+const App = () => (
+    <div className="App">
+        <HeaderBar />
+        <Container fluid="true" className="py-4">
+            <Movies />
+        </Container>
+    </div>
+);
 
 export default App;

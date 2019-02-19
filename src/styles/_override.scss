@@ -1,0 +1,17 @@
+@import './colors';
+
+$radius: 0.5rem;
+$font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+
+$body-color: $white;
+$body-bg: $body-bg-color;
+
+$navbar-light-brand-color: $primary;
+$modal-content-bg: $body-bg;
+$modal-backdrop-bg: $white;
+$modal-backdrop-opacity: 0.8;
+$modal-content-border-radius: 12px;
+$modal-content-bg: $black;
+$modal-header-border-color: $primary;
+$dropdown-divider-bg: $primary;
+$close-color: $primary;

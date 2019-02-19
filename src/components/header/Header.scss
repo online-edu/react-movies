@@ -1,0 +1,6 @@
+@import '../../styles/colors';
+
+.movie-header {
+    background: $header-bg;
+    border-bottom: 0.01em solid $primary;
+}
