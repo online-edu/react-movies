@@ -8,8 +8,8 @@ const Poster = ({ url, id, name, click }) => (
             className="movie-poster__image"
             alt={name}
             src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${url}`}
-            onClick={click.bind(this, id)}
-            onKeyPress={click.bind(this, id)}
+            onClick={() => click(id)}
+            onKeyPress={() => click(id)}
             role="presentation"
         />
     </figure>
