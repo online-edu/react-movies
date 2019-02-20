@@ -1,9 +1,12 @@
+@import '../../styles/colors';
+
 .movie-poster {
     .movie-poster__image {
         cursor: pointer;
-        border-radius: 12px;
         transition: all 0.3s ease-in;
-        &:hover {
+        &:hover,
+        &:focus {
+            outline-color: $primary;
             transform: scale(1.2);
         }
     }
