@@ -110,7 +110,7 @@ class Filter extends Component {
                                     </span>
                                 </label>
                             </div>
-                            <div className="custom-control custom-switch mt-4">
+                            <div className="custom-control custom-switch">
                                 <input
                                     type="checkbox"
                                     className="custom-control-input"
@@ -129,7 +129,7 @@ class Filter extends Component {
                                     Adult
                                 </label>
                             </div>
-                            <div className="custom-control custom-switch mt-4">
+                            <div className="custom-control custom-switch">
                                 <input
                                     type="checkbox"
                                     className="custom-control-input"
@@ -149,7 +149,7 @@ class Filter extends Component {
                                 </label>
                             </div>
                         </div>
-                        <div className="mt-2">
+                        <div className="mt-1">
                             <button
                                 type="button"
                                 aria-label="Apply"
