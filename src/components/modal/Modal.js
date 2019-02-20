@@ -38,7 +38,9 @@ const MovieModal = ({ show, onHide, movie }) => (
                     <div className="dropdown-divider" />
                     <dl className="row movie-modal__summary--list">
                         <dt className="col-sm-3 text-primary">Tagline</dt>
-                        <dd className="col-sm-9">{movie.tagline}</dd>
+                        <dd className="col-sm-9">
+                            {movie.tagline || 'Not available'}
+                        </dd>
                         <dt className="col-sm-3 text-primary">Rating</dt>
                         <dd className="col-sm-9">{movie.vote_average}</dd>
                         <dt className="col-sm-3 text-primary">Status</dt>
