@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from 'react-bootstrap/Collapse';
-
+import Switch from '../switch';
 /**
  * Filter component.
  */
@@ -110,44 +110,18 @@ class Filter extends Component {
                                     </span>
                                 </label>
                             </div>
-                            <div className="custom-control custom-switch">
-                                <input
-                                    type="checkbox"
-                                    className="custom-control-input"
-                                    aria-label="Adult Checkbox"
-                                    id="adult-filter"
-                                    name="adultFilter"
-                                    onChange={this.handleInputChange}
-                                    tabIndex="4"
-                                />
-                                <label
-                                    className="custom-control-label"
-                                    htmlFor="adult-filter"
-                                    aria-label="Adult filter"
-                                    aria-describedby="adult-filter"
-                                >
-                                    Adult
-                                </label>
-                            </div>
-                            <div className="custom-control custom-switch">
-                                <input
-                                    type="checkbox"
-                                    className="custom-control-input"
-                                    onChange={this.handleInputChange}
-                                    aria-label="Original Language Checkbox"
-                                    name="enLangFilter"
-                                    id="en-lang-filter"
-                                    tabIndex="5"
-                                />
-                                <label
-                                    className="custom-control-label"
-                                    htmlFor="en-lang-filter"
-                                    aria-label="Original Language English filter"
-                                    aria-describedby="en-lang-filter"
-                                >
-                                    Original Language English
-                                </label>
-                            </div>
+                            <Switch
+                                id="adultFilter"
+                                tabIndex="4"
+                                label="Adult"
+                                switchToggle={this.handleInputChange}
+                            />
+                            <Switch
+                                id="enLangFilter"
+                                tabIndex="5"
+                                label="Original Language"
+                                switchToggle={this.handleInputChange}
+                            />
                         </div>
                         <div className="mt-1">
                             <button
