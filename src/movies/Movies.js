@@ -4,7 +4,15 @@ import Col from 'react-bootstrap/Col';
 import { Poster, Spinner, Modal, Filter } from '../components';
 import { loadMovies, loadMovieById, filterMovies } from './MovieService';
 
+/**
+ * Movie component.
+ */
 class Movies extends Component {
+    /**
+     * Intilalizes the state and binds all methods.
+     *
+     * @param {Object} props - access 'props'
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -18,31 +26,46 @@ class Movies extends Component {
         this.onModalClose = this.onModalClose.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
-
+    /**
+     * Load movies once component is mounted.
+     */
     componentDidMount() {
         loadMovies()
             .then(movies => this.setState({ movies, source: movies }))
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }
-
+    /**
+     * Get a movie details
+     *
+     * @param {number} id - movie id
+     */
     onMovieClick(id) {
         loadMovieById(id)
             .then(movie => this.setState({ showModal: true, movie }))
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }
-
+    /**
+     * Toggle modal state on close.
+     *
+     */
     onModalClose() {
         this.setState({ showModal: false });
     }
-
+    /**
+     * Toggle modal state on close.
+     *
+     * @param {Object} filters - list of set filters
+     */
     onFilterChange(filters) {
         const { source } = this.state;
         const newMovies = filterMovies(source, filters);
         this.setState({ movies: newMovies });
     }
-
+    /**
+     * Render method for component
+     */
     render() {
         const { movies, loading, showModal, movie } = this.state;
         return (

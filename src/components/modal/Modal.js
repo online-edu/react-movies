@@ -4,7 +4,9 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Poster from '../poster';
-
+/**
+ * Modal component.
+ */
 const MovieModal = ({ show, onHide, movie }) => (
     <Modal
         show={show}
@@ -63,8 +65,11 @@ const MovieModal = ({ show, onHide, movie }) => (
 );
 
 MovieModal.propTypes = {
+    /** Toggle modal */
     show: PropTypes.bool.isRequired,
+    /** Gets called when the modal is closed. */
     onHide: PropTypes.func.isRequired,
+    /** Movie details */
     movie: PropTypes.shape({ title: PropTypes.string }).isRequired,
 };
 

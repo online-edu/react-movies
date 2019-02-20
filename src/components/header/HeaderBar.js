@@ -3,6 +3,9 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import './Header.scss';
 
+/**
+ * Header component.
+ */
 const HeaderBar = () => (
     <Navbar className="movie-header" expand="lg" sticky="top" role="banner">
         <Navbar.Brand tabIndex="1" href="#home" className="movie-header__brand">

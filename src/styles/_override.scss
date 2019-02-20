@@ -1,18 +1,22 @@
 @import './colors';
-
-$radius: 0.5rem;
+/**
+ * Overwrites the default styles defined by the bootstrap framework.
+ */
+//body
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-
 $body-color: $white;
 $body-bg: $body-bg-color;
-$border-radius:12px;
-
+//border
+$radius: 0.5rem;
+$border-radius: 12px;
+//navbar
 $navbar-light-brand-color: $primary;
+//modal
 $modal-content-bg: $body-bg;
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.8;
 $modal-content-border-radius: 12px;
 $modal-content-bg: $secondary;
 $modal-header-border-color: $primary;
+//divider
 $dropdown-divider-bg: $primary;
-$close-color: $primary;

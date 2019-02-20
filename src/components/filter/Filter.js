@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from 'react-bootstrap/Collapse';
 
+/**
+ * Filter component.
+ */
 class Filter extends Component {
     static get propTypes() {
         return {
+            /** Gets called when the user clicks on the 'Apply' button */
             onChange: PropTypes.func.isRequired,
         };
     }
-
+    /**
+     * Intilalizes the state and binds all methods.
+     *
+     * @param {Object} props - access 'props'
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -20,7 +28,9 @@ class Filter extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
-
+    /**
+     * Prepares filter options and pass to the parent component.
+     */
     onFilterChange() {
         const {
             ratingFilter: vote_average,
@@ -34,14 +44,20 @@ class Filter extends Component {
             : commonFilters;
         onChange(filters);
     }
-
+    /**
+     * Updates the state as user updates the filter options.
+     *
+     * @param {Event} e - an event from dom controls
+     */
     handleInputChange(e) {
         const { target } = e;
         const { type, name } = target;
         const value = type === 'checkbox' ? target.checked : target.value;
         this.setState({ [name]: value });
     }
-
+    /**
+     * Render method for component
+     */
     render() {
         const { open, ratingFilter } = this.state;
         return (
