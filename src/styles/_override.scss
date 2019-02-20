@@ -5,13 +5,14 @@ $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 
 $body-color: $white;
 $body-bg: $body-bg-color;
+$border-radius:12px;
 
 $navbar-light-brand-color: $primary;
 $modal-content-bg: $body-bg;
 $modal-backdrop-bg: $white;
 $modal-backdrop-opacity: 0.8;
 $modal-content-border-radius: 12px;
-$modal-content-bg: $black;
+$modal-content-bg: $secondary;
 $modal-header-border-color: $primary;
 $dropdown-divider-bg: $primary;
 $close-color: $primary;
