@@ -54,7 +54,7 @@ class Filter extends Component {
                         aria-controls="movie-filter"
                         aria-label="Filter"
                         aria-expanded={open}
-                        tabIndex="0"
+                        tabIndex="2"
                         className="btn btn-primary my-2"
                     >
                         Filter
@@ -63,6 +63,8 @@ class Filter extends Component {
                 <Collapse in={open}>
                     <div
                         id="movie-filter"
+                        role="toolbar"
+                        aria-label="Filter options"
                         className="border-top border-primary mt-1 py-3 px-1"
                     >
                         <h6 className="text-uppercase">Filter options</h6>
@@ -85,6 +87,7 @@ class Filter extends Component {
                                         step="0.5"
                                         value={ratingFilter}
                                         id="rating-filter"
+                                        tabIndex="3"
                                     />
                                     <span className="text-primary position-absolute font-weight-bold ml-2">
                                         {ratingFilter}
@@ -99,6 +102,7 @@ class Filter extends Component {
                                     id="adult-filter"
                                     name="adultFilter"
                                     onChange={this.handleInputChange}
+                                    tabIndex="4"
                                 />
                                 <label
                                     className="custom-control-label"
@@ -117,6 +121,7 @@ class Filter extends Component {
                                     aria-label="Original Language Checkbox"
                                     name="enLangFilter"
                                     id="en-lang-filter"
+                                    tabIndex="5"
                                 />
                                 <label
                                     className="custom-control-label"
@@ -131,8 +136,10 @@ class Filter extends Component {
                         <div className="mt-2">
                             <button
                                 type="button"
+                                aria-label="Apply"
                                 onClick={this.onFilterChange}
                                 className="btn btn-primary"
+                                tabIndex="6"
                             >
                                 Apply
                             </button>

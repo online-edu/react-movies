@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import Poster from '../poster';
 
 const MovieModal = ({ show, onHide, movie }) => (
@@ -16,10 +15,15 @@ const MovieModal = ({ show, onHide, movie }) => (
         centered
     >
         <Modal.Header>
-            <Modal.Title>{movie.title}</Modal.Title>
-            <Button variant="primary" onClick={onHide}>
+            <Modal.Title id="movie-details">{movie.title}</Modal.Title>
+            <button
+                type="button"
+                aria-label="Close"
+                onClick={onHide}
+                className="btn btn-primary"
+            >
                 Close
-            </Button>
+            </button>
         </Modal.Header>
         <Modal.Body>
             <Row>

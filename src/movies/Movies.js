@@ -50,13 +50,14 @@ class Movies extends Component {
                 <Filter onChange={this.onFilterChange} />
                 <Row className="justify-content-center">
                     {(!loading &&
-                        movies.map(m => (
+                        movies.map((m, i) => (
                             <Col className="my-3" key={m.id}>
                                 <Poster
                                     id={m.id}
                                     alt={m.name}
                                     url={m.poster_path}
                                     click={this.onMovieClick}
+                                    tabIndex={i + 7}
                                 />
                             </Col>
                         ))) || <Spinner />}
