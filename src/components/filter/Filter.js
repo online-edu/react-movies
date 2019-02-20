@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from 'react-bootstrap/Collapse';
 import Switch from '../switch';
+import Button from '../button';
 /**
  * Filter component.
  */
@@ -64,17 +65,15 @@ class Filter extends Component {
             <div className="bg-secondary px-3 rounded">
                 <section className="d-flex justify-content-between align-items-center">
                     <h6 className="mb-0">Popular movies</h6>
-                    <button
-                        type="button"
-                        onClick={() => this.setState({ open: !open })}
-                        aria-controls="movie-filter"
-                        aria-label="Filter"
-                        aria-expanded={open}
+                    <Button
                         tabIndex="2"
-                        className="btn btn-primary my-2"
-                    >
-                        Filter
-                    </button>
+                        label="Filter"
+                        aria={{
+                            'aria-controls': 'movie-filter',
+                            'aria-expanded': open,
+                        }}
+                        click={() => this.setState({ open: !open })}
+                    />
                 </section>
                 <Collapse in={open}>
                     <div
@@ -124,15 +123,11 @@ class Filter extends Component {
                             />
                         </div>
                         <div className="mt-1">
-                            <button
-                                type="button"
-                                aria-label="Apply"
-                                onClick={this.onFilterChange}
-                                className="btn btn-primary"
+                            <Button
                                 tabIndex="6"
-                            >
-                                Apply
-                            </button>
+                                label="Apply"
+                                click={this.onFilterChange}
+                            />
                         </div>
                     </div>
                 </Collapse>

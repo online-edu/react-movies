@@ -4,5 +4,6 @@ import Spinner from './spinner';
 import Switch from './switch';
 import Modal from './modal';
 import Filter from './filter';
+import Button from './button';
 
-export { HeaderBar, Spinner, Poster, Modal, Filter, Switch };
+export { Button, HeaderBar, Spinner, Poster, Modal, Filter, Switch };

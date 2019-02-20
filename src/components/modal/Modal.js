@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Poster from '../poster';
+import Button from '../button';
 /**
  * Modal component.
  */
@@ -18,14 +19,7 @@ const MovieModal = ({ show, onHide, movie }) => (
     >
         <Modal.Header>
             <Modal.Title id="movie-details">{movie.title}</Modal.Title>
-            <button
-                type="button"
-                aria-label="Close"
-                onClick={onHide}
-                className="btn btn-primary"
-            >
-                Close
-            </button>
+            <Button label="Close" click={onHide} />
         </Modal.Header>
         <Modal.Body>
             <Row>
