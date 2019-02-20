@@ -3,5 +3,11 @@
     "env": {
         "browser": true,
         "jest": true
+    },
+    "rules": {
+        "camelcase": [
+            "error",
+            { "allow": ["vote_average", "original_language"] }
+        ]
     }
 }

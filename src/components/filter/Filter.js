@@ -12,19 +12,27 @@ class Filter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: true,
+            open: false,
             enLangFilter: false,
             adultFilter: false,
-            ratingFilter: 8,
+            ratingFilter: 0,
         };
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
 
     onFilterChange() {
-        const { ratingFilter, enLangFilter, adultFilter } = this.state;
+        const {
+            ratingFilter: vote_average,
+            enLangFilter: original_language,
+            adultFilter: adult,
+        } = this.state;
         const { onChange } = this.props;
-        onChange({ ratingFilter, enLangFilter, adultFilter });
+        const commonFilters = { vote_average, adult };
+        const filters = original_language
+            ? { ...commonFilters, original_language: 'en' }
+            : commonFilters;
+        onChange(filters);
     }
 
     handleInputChange(e) {
@@ -65,7 +73,7 @@ class Filter extends Component {
                                     aria-label="Rating filter"
                                     aria-describedby="rating-filter"
                                 >
-                                    Rating
+                                    Rating (&ge;)
                                     <input
                                         type="range"
                                         className="custom-range"
