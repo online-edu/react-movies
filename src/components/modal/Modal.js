@@ -6,7 +6,7 @@ import Button from '../button';
 /**
  * Modal component.
  */
-const MovieModal = ({ show, onHide, title, children }) => (
+const CommonModal = ({ show, onHide, title, children }) => (
     <Modal
         show={show}
         onHide={onHide}
@@ -25,7 +25,7 @@ const MovieModal = ({ show, onHide, title, children }) => (
 /**
  * Modal props types.
  */
-MovieModal.propTypes = {
+CommonModal.propTypes = {
     /** Toggle modal */
     show: PropTypes.bool.isRequired,
     /** Gets called when the modal is closed. */
@@ -36,4 +36,4 @@ MovieModal.propTypes = {
     children: PropTypes.element.isRequired,
 };
 
-export default MovieModal;
+export default CommonModal;
