@@ -75,8 +75,8 @@ class Movies extends Component {
             <section>
                 <Filter onChange={this.onFilterChange} />
                 <Row className="justify-content-center">
-                    {(!loading &&
-                        movies.map((m, i) => (
+                    {(!loading
+                        && movies.map(m => (
                             <Col className="my-3 text-center" key={m.id}>
                                 <Poster
                                     id={m.id}

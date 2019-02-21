@@ -44,11 +44,11 @@ describe('<Movie />', () => {
     it('componentDidMount should fetch, and put movies in state', () => {
         const wrapper = shallow(<Movies />);
         return loadMovies()
-            .then(movies => {
+            .then((movies) => {
                 wrapper.setState({ movies });
                 expect(wrapper.state('movies').length).toEqual(20);
             })
-            .catch(err => {
+            .catch((err) => {
                 wrapper.setState({ loading: false });
                 expect(wrapper.state('loading')).toBe(false);
                 expect(err).toBeDefined();
@@ -60,7 +60,7 @@ describe('<Movie />', () => {
         wrapper.instance().onMovieClick(480530);
         wrapper.update();
         expect(wrapper.state('movies')).toBeDefined();
-        return loadMovieById(480530).then(movie => {
+        return loadMovieById(480530).then((movie) => {
             wrapper.setState({ showModal: true, movie, loading: false });
             expect(wrapper.state('movie')).toHaveProperty(['id']);
             expect(wrapper.state('showModal')).toBe(true);
