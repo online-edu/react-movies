@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Poster, Spinner, Modal, Filter } from '../components';
 import { loadMovies, loadMovieById, filterMovies } from './MovieService';
+import MovieDetails from './MovieDetails';
 
 /**
  * Movie component.
@@ -97,11 +98,13 @@ class Movies extends Component {
                             </Col>
                         ))) || <Spinner />}
                 </Row>
-                <Modal
-                    show={showModal}
-                    movie={movie}
-                    onHide={this.onModalClose}
-                />
+                {showModal && (
+                    <MovieDetails
+                        show={showModal}
+                        onHide={this.onModalClose}
+                        movie={movie}
+                    />
+                )}
             </section>
         );
     }

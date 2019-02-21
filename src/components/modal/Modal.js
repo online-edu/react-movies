@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Poster from '../poster';
 import Button from '../button';
+
 /**
  * Modal component.
  */
-const MovieModal = ({ show, onHide, movie }) => (
+const MovieModal = ({ show, onHide, title, children }) => (
     <Modal
         show={show}
         onHide={onHide}
@@ -17,54 +15,25 @@ const MovieModal = ({ show, onHide, movie }) => (
         className="movie-modal"
         centered
     >
-        <Modal.Header>
-            <Modal.Title id="movie-details">{movie.title}</Modal.Title>
+        <Modal.Header className="align-items-center">
+            <Modal.Title id="movie-details">{title}</Modal.Title>
             <Button label="Close" click={onHide} />
         </Modal.Header>
-        <Modal.Body>
-            <Row>
-                <Col sm lg={4}>
-                    <Poster name={movie.title} url={`${movie.poster_path}`} />
-                </Col>
-                <Col sm lg={8}>
-                    <Row>
-                        <Col md={12}>
-                            <p className="h6 text-primary">Overview</p>
-                            <p className="mb-0">
-                                <em>{movie.overview}</em>
-                            </p>
-                        </Col>
-                    </Row>
-                    <div className="dropdown-divider" />
-                    <dl className="row movie-modal__summary--list">
-                        <dt className="col-sm-3 text-primary">Tagline</dt>
-                        <dd className="col-sm-9">
-                            {movie.tagline || 'Not available'}
-                        </dd>
-                        <dt className="col-sm-3 text-primary">Rating</dt>
-                        <dd className="col-sm-9">{movie.vote_average}</dd>
-                        <dt className="col-sm-3 text-primary">Status</dt>
-                        <dd className="col-sm-9">{movie.status}</dd>
-                        <dt className="col-sm-3 text-primary">Release Date</dt>
-                        <dd className="col-sm-9">{movie.release_date}</dd>
-                        <dt className="col-sm-3 text-primary">Language</dt>
-                        <dd className="col-sm-9 text-uppercase">
-                            {movie.original_language}
-                        </dd>
-                    </dl>
-                </Col>
-            </Row>
-        </Modal.Body>
+        <Modal.Body>{children}</Modal.Body>
     </Modal>
 );
-
+/**
+ * Modal props types.
+ */
 MovieModal.propTypes = {
     /** Toggle modal */
     show: PropTypes.bool.isRequired,
     /** Gets called when the modal is closed. */
     onHide: PropTypes.func.isRequired,
     /** Movie details */
-    movie: PropTypes.shape({ title: PropTypes.string }).isRequired,
+    title: PropTypes.string.isRequired,
+    /** Children for modal body */
+    children: PropTypes.element.isRequired,
 };
 
 export default MovieModal;
