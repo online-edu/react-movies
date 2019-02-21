@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 /**
  * Switch component.
  */
-const Switch = ({ switchToggle, id, tabIndex, label }) => (
+const Switch = ({ switchToggle, id, label }) => (
     <div className="custom-control custom-switch">
         <input
             type="checkbox"
@@ -13,7 +13,6 @@ const Switch = ({ switchToggle, id, tabIndex, label }) => (
             id={id}
             name={id}
             onChange={switchToggle}
-            tabIndex={tabIndex}
         />
         <label
             className="custom-control-label"
@@ -35,7 +34,5 @@ Switch.propTypes = {
     label: PropTypes.string.isRequired,
     /** Gets called when the user clicks on switch */
     switchToggle: PropTypes.func.isRequired,
-    /** Maintain tab index for keyboard navigation. */
-    tabIndex: PropTypes.number.isRequired,
 };
 export default Switch;

@@ -7,9 +7,7 @@ import request from '../utils/request';
  * @returns {Promise}
  */
 const loadMovies = () =>
-    request
-        .get(`${api}/movie/popular${key}`)
-        .then(({ results: movies }) => Promise.resolve(movies));
+    request.get(`${api}/movie/popular${key}`).then(({ results: movies }) => Promise.resolve(movies));
 /**
  * Load movie details by id from server
  *

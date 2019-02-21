@@ -20,3 +20,10 @@ $modal-content-bg: $secondary;
 $modal-header-border-color: $primary;
 //divider
 $dropdown-divider-bg: $primary;
+
+.btn-link:focus,
+.btn-link {
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important;
+    }
+}

@@ -26,16 +26,16 @@ class Movies extends Component {
         this.onModalClose = this.onModalClose.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
+
     /**
      * Load movies once component is mounted.
      */
     componentDidMount() {
         loadMovies()
-            .then(movies =>
-                this.setState({ movies, source: movies, loading: false }),
-            )
+            .then(movies => this.setState({ movies, source: movies, loading: false }))
             .catch(err => this.setState({ loading: false }));
     }
+
     /**
      * Get a movie details
      *
@@ -43,11 +43,10 @@ class Movies extends Component {
      */
     onMovieClick(id) {
         loadMovieById(id)
-            .then(movie =>
-                this.setState({ showModal: true, movie, loading: false }),
-            )
+            .then(movie => this.setState({ showModal: true, movie, loading: false }))
             .catch(err => this.setState({ loading: false }));
     }
+
     /**
      * Toggle modal state on close.
      *
@@ -55,6 +54,7 @@ class Movies extends Component {
     onModalClose() {
         this.setState({ showModal: false });
     }
+
     /**
      * Toggle modal state on close.
      *
@@ -65,6 +65,7 @@ class Movies extends Component {
         const newMovies = filterMovies(source, filters);
         this.setState({ movies: newMovies });
     }
+
     /**
      * Render method for component
      */
@@ -82,7 +83,6 @@ class Movies extends Component {
                                     name={m.original_title}
                                     url={m.poster_path}
                                     click={this.onMovieClick}
-                                    tabIndex={i + 7}
                                 />
                             </Col>
                         ))) || <Spinner />}
