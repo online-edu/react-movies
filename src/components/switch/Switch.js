@@ -30,7 +30,7 @@ const Switch = ({ switchToggle, id, tabIndex, label }) => (
  */
 Switch.propTypes = {
     /** Id to be assigned to the control. */
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     /** Display value */
     label: PropTypes.string.isRequired,
     /** Gets called when the user clicks on switch */

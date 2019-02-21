@@ -27,6 +27,6 @@ Button.propTypes = {
     /** Gets called when the user clicks on button */
     click: PropTypes.func.isRequired,
     /** Maintain tab index for keyboard navigation. */
-    tabIndex: PropTypes.number.isRequired,
+    tabIndex: PropTypes.number,
 };
 export default Button;

@@ -31,9 +31,10 @@ class Movies extends Component {
      */
     componentDidMount() {
         loadMovies()
-            .then(movies => this.setState({ movies, source: movies }))
-            .catch(err => console.log(err))
-            .finally(() => this.setState({ loading: false }));
+            .then(movies =>
+                this.setState({ movies, source: movies, loading: false }),
+            )
+            .catch(err => this.setState({ loading: false }));
     }
     /**
      * Get a movie details
@@ -42,9 +43,10 @@ class Movies extends Component {
      */
     onMovieClick(id) {
         loadMovieById(id)
-            .then(movie => this.setState({ showModal: true, movie }))
-            .catch(err => console.log(err))
-            .finally(() => this.setState({ loading: false }));
+            .then(movie =>
+                this.setState({ showModal: true, movie, loading: false }),
+            )
+            .catch(err => this.setState({ loading: false }));
     }
     /**
      * Toggle modal state on close.
@@ -77,7 +79,7 @@ class Movies extends Component {
                             <Col className="my-3" key={m.id}>
                                 <Poster
                                     id={m.id}
-                                    alt={m.name}
+                                    name={m.original_title}
                                     url={m.poster_path}
                                     click={this.onMovieClick}
                                     tabIndex={i + 7}
