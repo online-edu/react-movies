@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "test-coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src"
+    "lint": "eslint ./src",
+    "changelog": "generate-changelog"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "@endouble.com/eslint-config-endouble": "^2.0.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
+    "generate-changelog": "^1.7.1",
     "prop-types": "^15.7.2",
     "react-test-renderer": "^16.8.2"
   }
