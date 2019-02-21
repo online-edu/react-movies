@@ -77,7 +77,7 @@ class Movies extends Component {
                 <Row className="justify-content-center">
                     {(!loading &&
                         movies.map((m, i) => (
-                            <Col className="my-3" key={m.id}>
+                            <Col className="my-3 text-center" key={m.id}>
                                 <Poster
                                     id={m.id}
                                     name={m.original_title}
