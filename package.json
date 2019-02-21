@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-coverage": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "lint": "eslint ./src"
   },
@@ -39,6 +40,9 @@
   ],
   "devDependencies": {
     "@endouble.com/eslint-config-endouble": "^2.0.0",
-    "prop-types": "^15.7.2"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "prop-types": "^15.7.2",
+    "react-test-renderer": "^16.8.2"
   }
 }
