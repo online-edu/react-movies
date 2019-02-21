@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Poster, Spinner, Modal, Filter } from '../components';
 import { loadMovies, loadMovieById, filterMovies } from './MovieService';
+import MovieDetails from './MovieDetails';
 
 /**
  * Movie component.
@@ -21,20 +22,24 @@ class Movies extends Component {
             movie: {},
             loading: true,
             showModal: false,
+            error: false,
+            errMsg: '',
         };
         this.onMovieClick = this.onMovieClick.bind(this);
         this.onModalClose = this.onModalClose.bind(this);
+        this.onErrorModalHide = this.onErrorModalHide.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
+
     /**
      * Load movies once component is mounted.
      */
     componentDidMount() {
         loadMovies()
-            .then(movies => this.setState({ movies, source: movies }))
-            .catch(err => console.log(err))
-            .finally(() => this.setState({ loading: false }));
+            .then(movies => this.setState({ movies, source: movies, loading: false }))
+            .catch(err => this.handleError(err));
     }
+
     /**
      * Get a movie details
      *
@@ -42,10 +47,10 @@ class Movies extends Component {
      */
     onMovieClick(id) {
         loadMovieById(id)
-            .then(movie => this.setState({ showModal: true, movie }))
-            .catch(err => console.log(err))
-            .finally(() => this.setState({ loading: false }));
+            .then(movie => this.setState({ showModal: true, movie, loading: false }))
+            .catch(err => this.handleError(err));
     }
+
     /**
      * Toggle modal state on close.
      *
@@ -53,6 +58,7 @@ class Movies extends Component {
     onModalClose() {
         this.setState({ showModal: false });
     }
+
     /**
      * Toggle modal state on close.
      *
@@ -63,33 +69,55 @@ class Movies extends Component {
         const newMovies = filterMovies(source, filters);
         this.setState({ movies: newMovies });
     }
+
+    /**
+     * Toggle modal state on close for error.
+     *
+     */
+    onErrorModalHide() {
+        this.setState({ error: false });
+    }
+
+    /**
+     * Handles common errors for n/w requests.
+     *
+     * @param {string} err - Error message
+     */
+    handleError(err) {
+        this.setState({ loading: false, error: true, errMsg: err.toString() });
+    }
+
     /**
      * Render method for component
      */
     render() {
-        const { movies, loading, showModal, movie } = this.state;
+        const { movies, loading, showModal, movie, error, errMsg } = this.state;
         return (
             <section>
                 <Filter onChange={this.onFilterChange} />
                 <Row className="justify-content-center">
-                    {(!loading &&
-                        movies.map((m, i) => (
-                            <Col className="my-3" key={m.id}>
+                    {(!loading
+                        && movies.map(m => (
+                            <Col className="my-3 text-center" key={m.id}>
                                 <Poster
                                     id={m.id}
-                                    alt={m.name}
+                                    name={m.original_title}
                                     url={m.poster_path}
                                     click={this.onMovieClick}
-                                    tabIndex={i + 7}
                                 />
                             </Col>
                         ))) || <Spinner />}
                 </Row>
-                <Modal
-                    show={showModal}
-                    movie={movie}
-                    onHide={this.onModalClose}
-                />
+                {showModal && (
+                    <MovieDetails
+                        show={showModal}
+                        onHide={this.onModalClose}
+                        movie={movie}
+                    />
+                )}
+                <Modal show={error} title="Oops!" onHide={this.onErrorModalHide}>
+                    <strong>{errMsg}</strong>
+                </Modal>
             </section>
         );
     }

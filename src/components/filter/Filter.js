@@ -13,6 +13,7 @@ class Filter extends Component {
             onChange: PropTypes.func.isRequired,
         };
     }
+
     /**
      * Intilalizes the state and binds all methods.
      *
@@ -29,6 +30,7 @@ class Filter extends Component {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
+
     /**
      * Prepares filter options and pass to the parent component.
      */
@@ -45,6 +47,7 @@ class Filter extends Component {
             : commonFilters;
         onChange(filters);
     }
+
     /**
      * Updates the state as user updates the filter options.
      *
@@ -52,10 +55,11 @@ class Filter extends Component {
      */
     handleInputChange(e) {
         const { target } = e;
-        const { type, name } = target;
-        const value = type === 'checkbox' ? target.checked : target.value;
-        this.setState({ [name]: value });
+        const { type, name, checked, value } = target;
+        const val = type === 'checkbox' ? checked : value;
+        this.setState({ [name]: val });
     }
+
     /**
      * Render method for component
      */
@@ -66,7 +70,6 @@ class Filter extends Component {
                 <section className="d-flex justify-content-between align-items-center">
                     <h6 className="mb-0">Popular movies</h6>
                     <Button
-                        tabIndex="2"
                         label="Filter"
                         aria={{
                             'aria-controls': 'movie-filter',
@@ -102,7 +105,6 @@ class Filter extends Component {
                                         step="0.5"
                                         value={ratingFilter}
                                         id="rating-filter"
-                                        tabIndex="3"
                                     />
                                     <span className="text-primary position-absolute font-weight-bold ml-2">
                                         {ratingFilter}
@@ -111,20 +113,17 @@ class Filter extends Component {
                             </div>
                             <Switch
                                 id="adultFilter"
-                                tabIndex="4"
                                 label="Adult"
                                 switchToggle={this.handleInputChange}
                             />
                             <Switch
                                 id="enLangFilter"
-                                tabIndex="5"
                                 label="Original Language"
                                 switchToggle={this.handleInputChange}
                             />
                         </div>
                         <div className="mt-1">
                             <Button
-                                tabIndex="6"
                                 label="Apply"
                                 click={this.onFilterChange}
                             />

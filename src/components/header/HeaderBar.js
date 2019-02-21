@@ -8,7 +8,7 @@ import './Header.scss';
  */
 const HeaderBar = () => (
     <Navbar className="movie-header" expand="lg" sticky="top" role="banner">
-        <Navbar.Brand tabIndex="1" href="#home" className="movie-header__brand">
+        <Navbar.Brand href="#home" className="movie-header__brand">
             {/* <img
                 alt=""
                 src={logo}
