@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Poster /> renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Poster
+    click={[MockFunction]}
+    id={399579}
+    name="Alita: Battle Angel"
+    tabIndex={1}
+    url="xRWht48C2V8XNfzvPehyClOvDni.jpg"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <img
+        alt="Alita: Battle Angel"
+        className="movie-poster__image d-flex rounded"
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="presentation"
+        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
+        tabIndex={1}
+      />,
+      "className": "movie-poster d-flex justify-content-center",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "alt": "Alita: Battle Angel",
+        "className": "movie-poster__image d-flex rounded",
+        "onClick": [Function],
+        "onKeyPress": [Function],
+        "role": "presentation",
+        "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg",
+        "tabIndex": 1,
+      },
+      "ref": null,
+      "rendered": null,
+      "type": "img",
+    },
+    "type": "figure",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <img
+          alt="Alita: Battle Angel"
+          className="movie-poster__image d-flex rounded"
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          role="presentation"
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
+          tabIndex={1}
+        />,
+        "className": "movie-poster d-flex justify-content-center",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Alita: Battle Angel",
+          "className": "movie-poster__image d-flex rounded",
+          "onClick": [Function],
+          "onKeyPress": [Function],
+          "role": "presentation",
+          "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg",
+          "tabIndex": 1,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      "type": "figure",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
