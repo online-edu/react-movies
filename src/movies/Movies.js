@@ -22,9 +22,12 @@ class Movies extends Component {
             movie: {},
             loading: true,
             showModal: false,
+            error: false,
+            errMsg: '',
         };
         this.onMovieClick = this.onMovieClick.bind(this);
         this.onModalClose = this.onModalClose.bind(this);
+        this.onErrorModalHide = this.onErrorModalHide.bind(this);
         this.onFilterChange = this.onFilterChange.bind(this);
     }
 
@@ -68,20 +71,27 @@ class Movies extends Component {
     }
 
     /**
+     * Toggle modal state on close for error.
+     *
+     */
+    onErrorModalHide() {
+        this.setState({ error: false });
+    }
+
+    /**
      * Handles common errors for n/w requests.
      *
      * @param {string} err - Error message
      */
     handleError(err) {
-        console.error(err);
-        this.setState({ loading: false });
+        this.setState({ loading: false, error: true, errMsg: err.toString() });
     }
 
     /**
      * Render method for component
      */
     render() {
-        const { movies, loading, showModal, movie } = this.state;
+        const { movies, loading, showModal, movie, error, errMsg } = this.state;
         return (
             <section>
                 <Filter onChange={this.onFilterChange} />
@@ -105,6 +115,9 @@ class Movies extends Component {
                         movie={movie}
                     />
                 )}
+                <Modal show={error} title="Oops!" onHide={this.onErrorModalHide}>
+                    <strong>{errMsg}</strong>
+                </Modal>
             </section>
         );
     }
