@@ -27,11 +27,7 @@ ShallowWrapper {
         >
           <Spinner />
         </ForwardRef(Bootstrap(Row))>,
-        <MovieModal
-          movie={Object {}}
-          onHide={[Function]}
-          show={false}
-        />,
+        false,
       ],
     },
     "ref": null,
@@ -72,19 +68,7 @@ ShallowWrapper {
           "render": [Function],
         },
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "movie": Object {},
-          "onHide": [Function],
-          "show": false,
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
+      false,
     ],
     "type": "section",
   },
@@ -103,11 +87,7 @@ ShallowWrapper {
           >
             <Spinner />
           </ForwardRef(Bootstrap(Row))>,
-          <MovieModal
-            movie={Object {}}
-            onHide={[Function]}
-            show={false}
-          />,
+          false,
         ],
       },
       "ref": null,
@@ -148,19 +128,7 @@ ShallowWrapper {
             "render": [Function],
           },
         },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "movie": Object {},
-            "onHide": [Function],
-            "show": false,
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+        false,
       ],
       "type": "section",
     },

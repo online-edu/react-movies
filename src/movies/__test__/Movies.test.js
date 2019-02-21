@@ -1,8 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Movies from '../Movies';
+import MovieDetails from '../MovieDetails';
 import { loadMovies, loadMovieById } from '../MovieService';
-import { Modal, Spinner } from '../../components';
+import { Spinner } from '../../components';
 
 describe('<Movie />', () => {
     it('renders correctly', () => {
@@ -10,9 +11,10 @@ describe('<Movie />', () => {
         expect(component).toMatchSnapshot();
     });
 
-    it('renders a <Modal /> component', () => {
+    it('renders a <MovieDetails /> component', () => {
         const wrapper = shallow(<Movies />);
-        expect(wrapper.find(Modal)).toHaveLength(1);
+        wrapper.setState({ showModal: true });
+        expect(wrapper.find(MovieDetails)).toHaveLength(1);
     });
 
     it('renders a <Spinner /> component', () => {

@@ -5,7 +5,11 @@ import Button from '../../button';
 
 describe('<Modal />', () => {
     const onModalClose = jest.fn();
-    const wrapper = <Modal show movie={{}} onHide={onModalClose} />;
+    const wrapper = (
+        <Modal show title="Header" onHide={onModalClose}>
+            <div>Content</div>
+        </Modal>
+    );
 
     it('renders correctly', () => {
         const component = shallow(wrapper);

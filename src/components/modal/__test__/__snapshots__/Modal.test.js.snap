@@ -4,10 +4,14 @@ exports[`<Modal /> renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MovieModal
-    movie={Object {}}
     onHide={[MockFunction]}
     show={true}
-  />,
+    title="Header"
+  >
+    <div>
+      Content
+    </div>
+  </MovieModal>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -25,10 +29,14 @@ ShallowWrapper {
       "aria-labelledby": "movie-details",
       "centered": true,
       "children": Array [
-        <ForwardRef(Bootstrap(ModalHeader))>
+        <ForwardRef(Bootstrap(ModalHeader))
+          className="align-items-center"
+        >
           <ForwardRef(Bootstrap(ModalTitle))
             id="movie-details"
-          />
+          >
+            Header
+          </ForwardRef(Bootstrap(ModalTitle))>
           <Button
             aria={Object {}}
             click={[MockFunction]}
@@ -36,89 +44,9 @@ ShallowWrapper {
           />
         </ForwardRef(Bootstrap(ModalHeader))>,
         <ForwardRef(Bootstrap(ModalBody))>
-          <ForwardRef(Bootstrap(Row))>
-            <ForwardRef(Bootstrap(Col))
-              lg={4}
-              sm={true}
-            >
-              <Poster
-                click={[Function]}
-                id={0}
-                name="movie"
-                url="undefined"
-              />
-            </ForwardRef(Bootstrap(Col))>
-            <ForwardRef(Bootstrap(Col))
-              lg={8}
-              sm={true}
-            >
-              <ForwardRef(Bootstrap(Row))>
-                <ForwardRef(Bootstrap(Col))
-                  md={12}
-                >
-                  <p
-                    className="h6 text-primary"
-                  >
-                    Overview
-                  </p>
-                  <p
-                    className="mb-0"
-                  >
-                    <em />
-                  </p>
-                </ForwardRef(Bootstrap(Col))>
-              </ForwardRef(Bootstrap(Row))>
-              <div
-                className="dropdown-divider"
-              />
-              <dl
-                className="row movie-modal__summary--list"
-              >
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Tagline
-                </dt>
-                <dd
-                  className="col-sm-9"
-                >
-                  Not available
-                </dd>
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Rating
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Status
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Release Date
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Language
-                </dt>
-                <dd
-                  className="col-sm-9 text-uppercase"
-                />
-              </dl>
-            </ForwardRef(Bootstrap(Col))>
-          </ForwardRef(Bootstrap(Row))>
+          <div>
+            Content
+          </div>
         </ForwardRef(Bootstrap(ModalBody))>,
       ],
       "className": "movie-modal",
@@ -136,13 +64,16 @@ ShallowWrapper {
           "children": Array [
             <ForwardRef(Bootstrap(ModalTitle))
               id="movie-details"
-            />,
+            >
+              Header
+            </ForwardRef(Bootstrap(ModalTitle))>,
             <Button
               aria={Object {}}
               click={[MockFunction]}
               label="Close"
             />,
           ],
+          "className": "align-items-center",
         },
         "ref": null,
         "rendered": Array [
@@ -151,11 +82,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "children": undefined,
+              "children": "Header",
               "id": "movie-details",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "Header",
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": undefined,
@@ -189,588 +120,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <ForwardRef(Bootstrap(Row))>
-            <ForwardRef(Bootstrap(Col))
-              lg={4}
-              sm={true}
-            >
-              <Poster
-                click={[Function]}
-                id={0}
-                name="movie"
-                url="undefined"
-              />
-            </ForwardRef(Bootstrap(Col))>
-            <ForwardRef(Bootstrap(Col))
-              lg={8}
-              sm={true}
-            >
-              <ForwardRef(Bootstrap(Row))>
-                <ForwardRef(Bootstrap(Col))
-                  md={12}
-                >
-                  <p
-                    className="h6 text-primary"
-                  >
-                    Overview
-                  </p>
-                  <p
-                    className="mb-0"
-                  >
-                    <em />
-                  </p>
-                </ForwardRef(Bootstrap(Col))>
-              </ForwardRef(Bootstrap(Row))>
-              <div
-                className="dropdown-divider"
-              />
-              <dl
-                className="row movie-modal__summary--list"
-              >
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Tagline
-                </dt>
-                <dd
-                  className="col-sm-9"
-                >
-                  Not available
-                </dd>
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Rating
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Status
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Release Date
-                </dt>
-                <dd
-                  className="col-sm-9"
-                />
-                <dt
-                  className="col-sm-3 text-primary"
-                >
-                  Language
-                </dt>
-                <dd
-                  className="col-sm-9 text-uppercase"
-                />
-              </dl>
-            </ForwardRef(Bootstrap(Col))>
-          </ForwardRef(Bootstrap(Row))>,
+          "children": <div>
+            Content
+          </div>,
         },
         "ref": null,
         "rendered": Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <ForwardRef(Bootstrap(Col))
-                lg={4}
-                sm={true}
-              >
-                <Poster
-                  click={[Function]}
-                  id={0}
-                  name="movie"
-                  url="undefined"
-                />
-              </ForwardRef(Bootstrap(Col))>,
-              <ForwardRef(Bootstrap(Col))
-                lg={8}
-                sm={true}
-              >
-                <ForwardRef(Bootstrap(Row))>
-                  <ForwardRef(Bootstrap(Col))
-                    md={12}
-                  >
-                    <p
-                      className="h6 text-primary"
-                    >
-                      Overview
-                    </p>
-                    <p
-                      className="mb-0"
-                    >
-                      <em />
-                    </p>
-                  </ForwardRef(Bootstrap(Col))>
-                </ForwardRef(Bootstrap(Row))>
-                <div
-                  className="dropdown-divider"
-                />
-                <dl
-                  className="row movie-modal__summary--list"
-                >
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Tagline
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  >
-                    Not available
-                  </dd>
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Rating
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Status
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Release Date
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Language
-                  </dt>
-                  <dd
-                    className="col-sm-9 text-uppercase"
-                  />
-                </dl>
-              </ForwardRef(Bootstrap(Col))>,
-            ],
+            "children": "Content",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": <Poster
-                  click={[Function]}
-                  id={0}
-                  name="movie"
-                  url="undefined"
-                />,
-                "lg": 4,
-                "sm": true,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "click": [Function],
-                  "id": 0,
-                  "name": "movie",
-                  "url": "undefined",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-              "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": undefined,
-                "propTypes": undefined,
-                "render": [Function],
-              },
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": Array [
-                  <ForwardRef(Bootstrap(Row))>
-                    <ForwardRef(Bootstrap(Col))
-                      md={12}
-                    >
-                      <p
-                        className="h6 text-primary"
-                      >
-                        Overview
-                      </p>
-                      <p
-                        className="mb-0"
-                      >
-                        <em />
-                      </p>
-                    </ForwardRef(Bootstrap(Col))>
-                  </ForwardRef(Bootstrap(Row))>,
-                  <div
-                    className="dropdown-divider"
-                  />,
-                  <dl
-                    className="row movie-modal__summary--list"
-                  >
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Tagline
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    >
-                      Not available
-                    </dd>
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Rating
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Status
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Release Date
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Language
-                    </dt>
-                    <dd
-                      className="col-sm-9 text-uppercase"
-                    />
-                  </dl>,
-                ],
-                "lg": 8,
-                "sm": true,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "children": <ForwardRef(Bootstrap(Col))
-                      md={12}
-                    >
-                      <p
-                        className="h6 text-primary"
-                      >
-                        Overview
-                      </p>
-                      <p
-                        className="mb-0"
-                      >
-                        <em />
-                      </p>
-                    </ForwardRef(Bootstrap(Col))>,
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": Array [
-                        <p
-                          className="h6 text-primary"
-                        >
-                          Overview
-                        </p>,
-                        <p
-                          className="mb-0"
-                        >
-                          <em />
-                        </p>,
-                      ],
-                      "md": 12,
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Overview",
-                          "className": "h6 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Overview",
-                        "type": "p",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": <em />,
-                          "className": "mb-0",
-                        },
-                        "ref": null,
-                        "rendered": Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": undefined,
-                          },
-                          "ref": null,
-                          "rendered": null,
-                          "type": "em",
-                        },
-                        "type": "p",
-                      },
-                    ],
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": undefined,
-                      "propTypes": undefined,
-                      "render": [Function],
-                    },
-                  },
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": undefined,
-                    "propTypes": undefined,
-                    "render": [Function],
-                  },
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "className": "dropdown-divider",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": Array [
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Tagline
-                      </dt>,
-                      <dd
-                        className="col-sm-9"
-                      >
-                        Not available
-                      </dd>,
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Rating
-                      </dt>,
-                      <dd
-                        className="col-sm-9"
-                      />,
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Status
-                      </dt>,
-                      <dd
-                        className="col-sm-9"
-                      />,
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Release Date
-                      </dt>,
-                      <dd
-                        className="col-sm-9"
-                      />,
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Language
-                      </dt>,
-                      <dd
-                        className="col-sm-9 text-uppercase"
-                      />,
-                    ],
-                    "className": "row movie-modal__summary--list",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Tagline",
-                        "className": "col-sm-3 text-primary",
-                      },
-                      "ref": null,
-                      "rendered": "Tagline",
-                      "type": "dt",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Not available",
-                        "className": "col-sm-9",
-                      },
-                      "ref": null,
-                      "rendered": "Not available",
-                      "type": "dd",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Rating",
-                        "className": "col-sm-3 text-primary",
-                      },
-                      "ref": null,
-                      "rendered": "Rating",
-                      "type": "dt",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": undefined,
-                        "className": "col-sm-9",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "dd",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Status",
-                        "className": "col-sm-3 text-primary",
-                      },
-                      "ref": null,
-                      "rendered": "Status",
-                      "type": "dt",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": undefined,
-                        "className": "col-sm-9",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "dd",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Release Date",
-                        "className": "col-sm-3 text-primary",
-                      },
-                      "ref": null,
-                      "rendered": "Release Date",
-                      "type": "dt",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": undefined,
-                        "className": "col-sm-9",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "dd",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Language",
-                        "className": "col-sm-3 text-primary",
-                      },
-                      "ref": null,
-                      "rendered": "Language",
-                      "type": "dt",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": undefined,
-                        "className": "col-sm-9 text-uppercase",
-                      },
-                      "ref": null,
-                      "rendered": null,
-                      "type": "dd",
-                    },
-                  ],
-                  "type": "dl",
-                },
-              ],
-              "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": undefined,
-                "propTypes": undefined,
-                "render": [Function],
-              },
-            },
-          ],
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": undefined,
-            "propTypes": undefined,
-            "render": [Function],
-          },
+          "rendered": "Content",
+          "type": "div",
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -828,10 +192,14 @@ ShallowWrapper {
         "aria-labelledby": "movie-details",
         "centered": true,
         "children": Array [
-          <ForwardRef(Bootstrap(ModalHeader))>
+          <ForwardRef(Bootstrap(ModalHeader))
+            className="align-items-center"
+          >
             <ForwardRef(Bootstrap(ModalTitle))
               id="movie-details"
-            />
+            >
+              Header
+            </ForwardRef(Bootstrap(ModalTitle))>
             <Button
               aria={Object {}}
               click={[MockFunction]}
@@ -839,89 +207,9 @@ ShallowWrapper {
             />
           </ForwardRef(Bootstrap(ModalHeader))>,
           <ForwardRef(Bootstrap(ModalBody))>
-            <ForwardRef(Bootstrap(Row))>
-              <ForwardRef(Bootstrap(Col))
-                lg={4}
-                sm={true}
-              >
-                <Poster
-                  click={[Function]}
-                  id={0}
-                  name="movie"
-                  url="undefined"
-                />
-              </ForwardRef(Bootstrap(Col))>
-              <ForwardRef(Bootstrap(Col))
-                lg={8}
-                sm={true}
-              >
-                <ForwardRef(Bootstrap(Row))>
-                  <ForwardRef(Bootstrap(Col))
-                    md={12}
-                  >
-                    <p
-                      className="h6 text-primary"
-                    >
-                      Overview
-                    </p>
-                    <p
-                      className="mb-0"
-                    >
-                      <em />
-                    </p>
-                  </ForwardRef(Bootstrap(Col))>
-                </ForwardRef(Bootstrap(Row))>
-                <div
-                  className="dropdown-divider"
-                />
-                <dl
-                  className="row movie-modal__summary--list"
-                >
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Tagline
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  >
-                    Not available
-                  </dd>
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Rating
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Status
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Release Date
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Language
-                  </dt>
-                  <dd
-                    className="col-sm-9 text-uppercase"
-                  />
-                </dl>
-              </ForwardRef(Bootstrap(Col))>
-            </ForwardRef(Bootstrap(Row))>
+            <div>
+              Content
+            </div>
           </ForwardRef(Bootstrap(ModalBody))>,
         ],
         "className": "movie-modal",
@@ -939,13 +227,16 @@ ShallowWrapper {
             "children": Array [
               <ForwardRef(Bootstrap(ModalTitle))
                 id="movie-details"
-              />,
+              >
+                Header
+              </ForwardRef(Bootstrap(ModalTitle))>,
               <Button
                 aria={Object {}}
                 click={[MockFunction]}
                 label="Close"
               />,
             ],
+            "className": "align-items-center",
           },
           "ref": null,
           "rendered": Array [
@@ -954,11 +245,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": undefined,
+                "children": "Header",
                 "id": "movie-details",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "Header",
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": undefined,
@@ -992,588 +283,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <ForwardRef(Bootstrap(Row))>
-              <ForwardRef(Bootstrap(Col))
-                lg={4}
-                sm={true}
-              >
-                <Poster
-                  click={[Function]}
-                  id={0}
-                  name="movie"
-                  url="undefined"
-                />
-              </ForwardRef(Bootstrap(Col))>
-              <ForwardRef(Bootstrap(Col))
-                lg={8}
-                sm={true}
-              >
-                <ForwardRef(Bootstrap(Row))>
-                  <ForwardRef(Bootstrap(Col))
-                    md={12}
-                  >
-                    <p
-                      className="h6 text-primary"
-                    >
-                      Overview
-                    </p>
-                    <p
-                      className="mb-0"
-                    >
-                      <em />
-                    </p>
-                  </ForwardRef(Bootstrap(Col))>
-                </ForwardRef(Bootstrap(Row))>
-                <div
-                  className="dropdown-divider"
-                />
-                <dl
-                  className="row movie-modal__summary--list"
-                >
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Tagline
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  >
-                    Not available
-                  </dd>
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Rating
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Status
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Release Date
-                  </dt>
-                  <dd
-                    className="col-sm-9"
-                  />
-                  <dt
-                    className="col-sm-3 text-primary"
-                  >
-                    Language
-                  </dt>
-                  <dd
-                    className="col-sm-9 text-uppercase"
-                  />
-                </dl>
-              </ForwardRef(Bootstrap(Col))>
-            </ForwardRef(Bootstrap(Row))>,
+            "children": <div>
+              Content
+            </div>,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "function",
+            "nodeType": "host",
             "props": Object {
-              "children": Array [
-                <ForwardRef(Bootstrap(Col))
-                  lg={4}
-                  sm={true}
-                >
-                  <Poster
-                    click={[Function]}
-                    id={0}
-                    name="movie"
-                    url="undefined"
-                  />
-                </ForwardRef(Bootstrap(Col))>,
-                <ForwardRef(Bootstrap(Col))
-                  lg={8}
-                  sm={true}
-                >
-                  <ForwardRef(Bootstrap(Row))>
-                    <ForwardRef(Bootstrap(Col))
-                      md={12}
-                    >
-                      <p
-                        className="h6 text-primary"
-                      >
-                        Overview
-                      </p>
-                      <p
-                        className="mb-0"
-                      >
-                        <em />
-                      </p>
-                    </ForwardRef(Bootstrap(Col))>
-                  </ForwardRef(Bootstrap(Row))>
-                  <div
-                    className="dropdown-divider"
-                  />
-                  <dl
-                    className="row movie-modal__summary--list"
-                  >
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Tagline
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    >
-                      Not available
-                    </dd>
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Rating
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Status
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Release Date
-                    </dt>
-                    <dd
-                      className="col-sm-9"
-                    />
-                    <dt
-                      className="col-sm-3 text-primary"
-                    >
-                      Language
-                    </dt>
-                    <dd
-                      className="col-sm-9 text-uppercase"
-                    />
-                  </dl>
-                </ForwardRef(Bootstrap(Col))>,
-              ],
+              "children": "Content",
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": <Poster
-                    click={[Function]}
-                    id={0}
-                    name="movie"
-                    url="undefined"
-                  />,
-                  "lg": 4,
-                  "sm": true,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "click": [Function],
-                    "id": 0,
-                    "name": "movie",
-                    "url": "undefined",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "defaultProps": undefined,
-                  "propTypes": undefined,
-                  "render": [Function],
-                },
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": Array [
-                    <ForwardRef(Bootstrap(Row))>
-                      <ForwardRef(Bootstrap(Col))
-                        md={12}
-                      >
-                        <p
-                          className="h6 text-primary"
-                        >
-                          Overview
-                        </p>
-                        <p
-                          className="mb-0"
-                        >
-                          <em />
-                        </p>
-                      </ForwardRef(Bootstrap(Col))>
-                    </ForwardRef(Bootstrap(Row))>,
-                    <div
-                      className="dropdown-divider"
-                    />,
-                    <dl
-                      className="row movie-modal__summary--list"
-                    >
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Tagline
-                      </dt>
-                      <dd
-                        className="col-sm-9"
-                      >
-                        Not available
-                      </dd>
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Rating
-                      </dt>
-                      <dd
-                        className="col-sm-9"
-                      />
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Status
-                      </dt>
-                      <dd
-                        className="col-sm-9"
-                      />
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Release Date
-                      </dt>
-                      <dd
-                        className="col-sm-9"
-                      />
-                      <dt
-                        className="col-sm-3 text-primary"
-                      >
-                        Language
-                      </dt>
-                      <dd
-                        className="col-sm-9 text-uppercase"
-                      />
-                    </dl>,
-                  ],
-                  "lg": 8,
-                  "sm": true,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": <ForwardRef(Bootstrap(Col))
-                        md={12}
-                      >
-                        <p
-                          className="h6 text-primary"
-                        >
-                          Overview
-                        </p>
-                        <p
-                          className="mb-0"
-                        >
-                          <em />
-                        </p>
-                      </ForwardRef(Bootstrap(Col))>,
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": Array [
-                          <p
-                            className="h6 text-primary"
-                          >
-                            Overview
-                          </p>,
-                          <p
-                            className="mb-0"
-                          >
-                            <em />
-                          </p>,
-                        ],
-                        "md": 12,
-                      },
-                      "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": "Overview",
-                            "className": "h6 text-primary",
-                          },
-                          "ref": null,
-                          "rendered": "Overview",
-                          "type": "p",
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": <em />,
-                            "className": "mb-0",
-                          },
-                          "ref": null,
-                          "rendered": Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": undefined,
-                            },
-                            "ref": null,
-                            "rendered": null,
-                            "type": "em",
-                          },
-                          "type": "p",
-                        },
-                      ],
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": undefined,
-                        "propTypes": undefined,
-                        "render": [Function],
-                      },
-                    },
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": undefined,
-                      "propTypes": undefined,
-                      "render": [Function],
-                    },
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "className": "dropdown-divider",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": Array [
-                        <dt
-                          className="col-sm-3 text-primary"
-                        >
-                          Tagline
-                        </dt>,
-                        <dd
-                          className="col-sm-9"
-                        >
-                          Not available
-                        </dd>,
-                        <dt
-                          className="col-sm-3 text-primary"
-                        >
-                          Rating
-                        </dt>,
-                        <dd
-                          className="col-sm-9"
-                        />,
-                        <dt
-                          className="col-sm-3 text-primary"
-                        >
-                          Status
-                        </dt>,
-                        <dd
-                          className="col-sm-9"
-                        />,
-                        <dt
-                          className="col-sm-3 text-primary"
-                        >
-                          Release Date
-                        </dt>,
-                        <dd
-                          className="col-sm-9"
-                        />,
-                        <dt
-                          className="col-sm-3 text-primary"
-                        >
-                          Language
-                        </dt>,
-                        <dd
-                          className="col-sm-9 text-uppercase"
-                        />,
-                      ],
-                      "className": "row movie-modal__summary--list",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Tagline",
-                          "className": "col-sm-3 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Tagline",
-                        "type": "dt",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Not available",
-                          "className": "col-sm-9",
-                        },
-                        "ref": null,
-                        "rendered": "Not available",
-                        "type": "dd",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Rating",
-                          "className": "col-sm-3 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Rating",
-                        "type": "dt",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": undefined,
-                          "className": "col-sm-9",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "dd",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Status",
-                          "className": "col-sm-3 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Status",
-                        "type": "dt",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": undefined,
-                          "className": "col-sm-9",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "dd",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Release Date",
-                          "className": "col-sm-3 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Release Date",
-                        "type": "dt",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": undefined,
-                          "className": "col-sm-9",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "dd",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": "Language",
-                          "className": "col-sm-3 text-primary",
-                        },
-                        "ref": null,
-                        "rendered": "Language",
-                        "type": "dt",
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "host",
-                        "props": Object {
-                          "children": undefined,
-                          "className": "col-sm-9 text-uppercase",
-                        },
-                        "ref": null,
-                        "rendered": null,
-                        "type": "dd",
-                      },
-                    ],
-                    "type": "dl",
-                  },
-                ],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "defaultProps": undefined,
-                  "propTypes": undefined,
-                  "render": [Function],
-                },
-              },
-            ],
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": undefined,
-              "propTypes": undefined,
-              "render": [Function],
-            },
+            "rendered": "Content",
+            "type": "div",
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
