@@ -1,67 +1,93 @@
 import React, { Component } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Poster, Spinner, Modal } from '../components';
-import { loadMovies, loadMovieById } from './MovieService';
+import { Poster, Spinner, Modal, Filter } from '../components';
+import { loadMovies, loadMovieById, filterMovies } from './MovieService';
 
+/**
+ * Movie component.
+ */
 class Movies extends Component {
+    /**
+     * Intilalizes the state and binds all methods.
+     *
+     * @param {Object} props - access 'props'
+     */
     constructor(props) {
         super(props);
         this.state = {
-            movies: {},
-            selectedMovie: {},
+            movies: [],
+            source: [],
+            movie: {},
             loading: true,
             showModal: false,
         };
         this.onMovieClick = this.onMovieClick.bind(this);
         this.onModalClose = this.onModalClose.bind(this);
+        this.onFilterChange = this.onFilterChange.bind(this);
     }
-
+    /**
+     * Load movies once component is mounted.
+     */
     componentDidMount() {
         loadMovies()
-            .then(movies => this.setState({ movies }))
+            .then(movies => this.setState({ movies, source: movies }))
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }
-
+    /**
+     * Get a movie details
+     *
+     * @param {number} id - movie id
+     */
     onMovieClick(id) {
         loadMovieById(id)
-            .then(selectedMovie =>
-                this.setState({ showModal: true, selectedMovie }),
-            )
+            .then(movie => this.setState({ showModal: true, movie }))
             .catch(err => console.log(err))
             .finally(() => this.setState({ loading: false }));
     }
-
+    /**
+     * Toggle modal state on close.
+     *
+     */
     onModalClose() {
         this.setState({ showModal: false });
     }
-
+    /**
+     * Toggle modal state on close.
+     *
+     * @param {Object} filters - list of set filters
+     */
+    onFilterChange(filters) {
+        const { source } = this.state;
+        const newMovies = filterMovies(source, filters);
+        this.setState({ movies: newMovies });
+    }
+    /**
+     * Render method for component
+     */
     render() {
-        const {
-            movies: { results },
-            loading,
-            showModal,
-            selectedMovie,
-        } = this.state;
+        const { movies, loading, showModal, movie } = this.state;
         return (
             <section>
+                <Filter onChange={this.onFilterChange} />
                 <Row className="justify-content-center">
                     {(!loading &&
-                        results.map(movie => (
-                            <Col className="my-3" key={movie.id} sm>
+                        movies.map((m, i) => (
+                            <Col className="my-3" key={m.id}>
                                 <Poster
-                                    id={movie.id}
-                                    alt={movie.name}
-                                    url={movie.poster_path}
+                                    id={m.id}
+                                    alt={m.name}
+                                    url={m.poster_path}
                                     click={this.onMovieClick}
+                                    tabIndex={i + 7}
                                 />
                             </Col>
                         ))) || <Spinner />}
                 </Row>
                 <Modal
                     show={showModal}
-                    movie={selectedMovie}
+                    movie={movie}
                     onHide={this.onModalClose}
                 />
             </section>

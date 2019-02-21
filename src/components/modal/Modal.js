@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import Poster from '../poster';
-
+import Button from '../button';
+/**
+ * Modal component.
+ */
 const MovieModal = ({ show, onHide, movie }) => (
     <Modal
         show={show}
@@ -16,10 +18,8 @@ const MovieModal = ({ show, onHide, movie }) => (
         centered
     >
         <Modal.Header>
-            <Modal.Title>{movie.title}</Modal.Title>
-            <Button variant="primary" onClick={onHide}>
-                Close
-            </Button>
+            <Modal.Title id="movie-details">{movie.title}</Modal.Title>
+            <Button label="Close" click={onHide} />
         </Modal.Header>
         <Modal.Body>
             <Row>
@@ -38,7 +38,9 @@ const MovieModal = ({ show, onHide, movie }) => (
                     <div className="dropdown-divider" />
                     <dl className="row movie-modal__summary--list">
                         <dt className="col-sm-3 text-primary">Tagline</dt>
-                        <dd className="col-sm-9">{movie.tagline}</dd>
+                        <dd className="col-sm-9">
+                            {movie.tagline || 'Not available'}
+                        </dd>
                         <dt className="col-sm-3 text-primary">Rating</dt>
                         <dd className="col-sm-9">{movie.vote_average}</dd>
                         <dt className="col-sm-3 text-primary">Status</dt>
@@ -57,8 +59,11 @@ const MovieModal = ({ show, onHide, movie }) => (
 );
 
 MovieModal.propTypes = {
+    /** Toggle modal */
     show: PropTypes.bool.isRequired,
+    /** Gets called when the modal is closed. */
     onHide: PropTypes.func.isRequired,
+    /** Movie details */
     movie: PropTypes.shape({ title: PropTypes.string }).isRequired,
 };
 

@@ -3,9 +3,12 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import './Header.scss';
 
+/**
+ * Header component.
+ */
 const HeaderBar = () => (
-    <Navbar className="movie-header" expand="lg" sticky="top">
-        <Navbar.Brand href="#home">
+    <Navbar className="movie-header" expand="lg" sticky="top" role="banner">
+        <Navbar.Brand tabIndex="1" href="#home" className="movie-header__brand">
             {/* <img
                 alt=""
                 src={logo}
