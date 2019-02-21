@@ -33,7 +33,7 @@ class Movies extends Component {
     componentDidMount() {
         loadMovies()
             .then(movies => this.setState({ movies, source: movies, loading: false }))
-            .catch(err => this.setState({ loading: false }));
+            .catch(err => this.handleError(err));
     }
 
     /**
@@ -44,7 +44,7 @@ class Movies extends Component {
     onMovieClick(id) {
         loadMovieById(id)
             .then(movie => this.setState({ showModal: true, movie, loading: false }))
-            .catch(err => this.setState({ loading: false }));
+            .catch(err => this.handleError(err));
     }
 
     /**
@@ -64,6 +64,16 @@ class Movies extends Component {
         const { source } = this.state;
         const newMovies = filterMovies(source, filters);
         this.setState({ movies: newMovies });
+    }
+
+    /**
+     * Handles common errors for n/w requests.
+     *
+     * @param {string} err - Error message
+     */
+    handleError(err) {
+        console.error(err);
+        this.setState({ loading: false });
     }
 
     /**
