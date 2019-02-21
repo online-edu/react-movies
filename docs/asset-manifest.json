@@ -1,13 +1,13 @@
 {
-  "main.css": "/online-edu/react-movies/static/css/main.2a7e68af.chunk.css",
-  "main.js": "/online-edu/react-movies/static/js/main.0a173d1d.chunk.js",
-  "main.js.map": "/online-edu/react-movies/static/js/main.0a173d1d.chunk.js.map",
+  "main.css": "/online-edu/react-movies/static/css/main.d0139068.chunk.css",
+  "main.js": "/online-edu/react-movies/static/js/main.93eb9666.chunk.js",
+  "main.js.map": "/online-edu/react-movies/static/js/main.93eb9666.chunk.js.map",
   "runtime~main.js": "/online-edu/react-movies/static/js/runtime~main.47bb740a.js",
   "runtime~main.js.map": "/online-edu/react-movies/static/js/runtime~main.47bb740a.js.map",
-  "static/js/2.ddbd99a3.chunk.js": "/online-edu/react-movies/static/js/2.ddbd99a3.chunk.js",
-  "static/js/2.ddbd99a3.chunk.js.map": "/online-edu/react-movies/static/js/2.ddbd99a3.chunk.js.map",
+  "static/js/2.4efe5a09.chunk.js": "/online-edu/react-movies/static/js/2.4efe5a09.chunk.js",
+  "static/js/2.4efe5a09.chunk.js.map": "/online-edu/react-movies/static/js/2.4efe5a09.chunk.js.map",
   "index.html": "/online-edu/react-movies/index.html",
-  "precache-manifest.7cf55b9227d23a03c9a9887c128e4c3b.js": "/online-edu/react-movies/precache-manifest.7cf55b9227d23a03c9a9887c128e4c3b.js",
+  "precache-manifest.f63b483e2683adcfbd533263c8e376a0.js": "/online-edu/react-movies/precache-manifest.f63b483e2683adcfbd533263c8e376a0.js",
   "service-worker.js": "/online-edu/react-movies/service-worker.js",
-  "static/css/main.2a7e68af.chunk.css.map": "/online-edu/react-movies/static/css/main.2a7e68af.chunk.css.map"
+  "static/css/main.d0139068.chunk.css.map": "/online-edu/react-movies/static/css/main.d0139068.chunk.css.map"
 }
