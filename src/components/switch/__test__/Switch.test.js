@@ -7,7 +7,6 @@ describe('<Switch />', () => {
     const wrapper = (
         <Switch
             id="enLangFilter"
-            tabIndex={5}
             label="Original Language"
             switchToggle={onSwitchClick}
         />

@@ -7,7 +7,6 @@ ShallowWrapper {
     click={[MockFunction]}
     id={399579}
     name="Alita: Battle Angel"
-    tabIndex={1}
     url="xRWht48C2V8XNfzvPehyClOvDni.jpg"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -24,16 +23,20 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <img
-        alt="Alita: Battle Angel"
-        className="movie-poster__image d-flex rounded"
-        onClick={[Function]}
-        onKeyPress={[Function]}
-        role="presentation"
-        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
-        tabIndex={1}
-      />,
-      "className": "movie-poster d-flex justify-content-center",
+      "children": <figure
+        className="movie-poster d-flex justify-content-center mb-0"
+      >
+        <img
+          alt="Alita: Battle Angel"
+          className="movie-poster__image d-flex rounded"
+          role="presentation"
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
+        />
+      </figure>,
+      "className": "btn btn-link",
+      "onClick": [Function],
+      "onKeyPress": [Function],
+      "type": "button",
     },
     "ref": null,
     "rendered": Object {
@@ -41,36 +44,13 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "alt": "Alita: Battle Angel",
-        "className": "movie-poster__image d-flex rounded",
-        "onClick": [Function],
-        "onKeyPress": [Function],
-        "role": "presentation",
-        "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg",
-        "tabIndex": 1,
-      },
-      "ref": null,
-      "rendered": null,
-      "type": "img",
-    },
-    "type": "figure",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
         "children": <img
           alt="Alita: Battle Angel"
           className="movie-poster__image d-flex rounded"
-          onClick={[Function]}
-          onKeyPress={[Function]}
           role="presentation"
           src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
-          tabIndex={1}
         />,
-        "className": "movie-poster d-flex justify-content-center",
+        "className": "movie-poster d-flex justify-content-center mb-0",
       },
       "ref": null,
       "rendered": Object {
@@ -80,17 +60,70 @@ ShallowWrapper {
         "props": Object {
           "alt": "Alita: Battle Angel",
           "className": "movie-poster__image d-flex rounded",
-          "onClick": [Function],
-          "onKeyPress": [Function],
           "role": "presentation",
           "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg",
-          "tabIndex": 1,
         },
         "ref": null,
         "rendered": null,
         "type": "img",
       },
       "type": "figure",
+    },
+    "type": "button",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <figure
+          className="movie-poster d-flex justify-content-center mb-0"
+        >
+          <img
+            alt="Alita: Battle Angel"
+            className="movie-poster__image d-flex rounded"
+            role="presentation"
+            src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
+          />
+        </figure>,
+        "className": "btn btn-link",
+        "onClick": [Function],
+        "onKeyPress": [Function],
+        "type": "button",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <img
+            alt="Alita: Battle Angel"
+            className="movie-poster__image d-flex rounded"
+            role="presentation"
+            src="https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg"
+          />,
+          "className": "movie-poster d-flex justify-content-center mb-0",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Alita: Battle Angel",
+            "className": "movie-poster__image d-flex rounded",
+            "role": "presentation",
+            "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2xRWht48C2V8XNfzvPehyClOvDni.jpg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": "figure",
+      },
+      "type": "button",
     },
   ],
   Symbol(enzyme.__options__): Object {

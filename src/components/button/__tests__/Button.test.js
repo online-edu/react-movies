@@ -6,7 +6,7 @@ describe('<Button />', () => {
     const onButtonClick = jest.fn();
     it('renders correctly', () => {
         const component = shallow(
-            <Button tabIndex={2} label="Filter" click={onButtonClick} />,
+            <Button label="Filter" click={onButtonClick} />,
         );
         expect(component).toMatchSnapshot();
     });

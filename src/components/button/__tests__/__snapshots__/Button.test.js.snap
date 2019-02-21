@@ -4,9 +4,9 @@ exports[`<Button /> renders correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Button
+    aria={Object {}}
     click={[MockFunction]}
     label="Filter"
-    tabIndex={2}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -26,7 +26,6 @@ ShallowWrapper {
       "children": "Filter",
       "className": "btn btn-primary my-2",
       "onClick": [MockFunction],
-      "tabIndex": 2,
       "type": "button",
     },
     "ref": null,
@@ -43,7 +42,6 @@ ShallowWrapper {
         "children": "Filter",
         "className": "btn btn-primary my-2",
         "onClick": [MockFunction],
-        "tabIndex": 2,
         "type": "button",
       },
       "ref": null,

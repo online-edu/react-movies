@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import Movies from '../Movies';
 import { loadMovies, loadMovieById } from '../MovieService';
-import { Poster, Modal, Spinner } from '../../components';
+import { Modal, Spinner } from '../../components';
 
 describe('<Movie />', () => {
     it('renders correctly', () => {
@@ -22,7 +22,8 @@ describe('<Movie />', () => {
 
     it('calls componentDidMount', () => {
         jest.spyOn(Movies.prototype, 'componentDidMount');
-        const wrapper = mount(<Movies />);
+        const wrapper = shallow(<Movies />);
+        wrapper.update();
         expect(Movies.prototype.componentDidMount).toBeCalledTimes(1);
     });
 

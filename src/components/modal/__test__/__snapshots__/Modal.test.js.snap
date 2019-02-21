@@ -30,6 +30,7 @@ ShallowWrapper {
             id="movie-details"
           />
           <Button
+            aria={Object {}}
             click={[MockFunction]}
             label="Close"
           />
@@ -137,6 +138,7 @@ ShallowWrapper {
               id="movie-details"
             />,
             <Button
+              aria={Object {}}
               click={[MockFunction]}
               label="Close"
             />,
@@ -166,6 +168,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
+              "aria": Object {},
               "click": [MockFunction],
               "label": "Close",
             },
@@ -830,6 +833,7 @@ ShallowWrapper {
               id="movie-details"
             />
             <Button
+              aria={Object {}}
               click={[MockFunction]}
               label="Close"
             />
@@ -937,6 +941,7 @@ ShallowWrapper {
                 id="movie-details"
               />,
               <Button
+                aria={Object {}}
                 click={[MockFunction]}
                 label="Close"
               />,
@@ -966,6 +971,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "aria": Object {},
                 "click": [MockFunction],
                 "label": "Close",
               },

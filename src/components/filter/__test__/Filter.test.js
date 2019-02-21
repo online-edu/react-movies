@@ -1,27 +1,27 @@
 import React from 'react';
-import Filter from '../Filter';
 import { shallow } from 'enzyme';
+import Filter from '../Filter';
 import Button from '../../button';
 import Switch from '../../switch';
 
 describe('<Filter />', () => {
     it('renders correctly', () => {
         const component = shallow(
-            <Filter onChange={() => console.log('on button click')} />,
+            <Filter onChange={jest.fn()} />,
         );
         expect(component).toMatchSnapshot();
     });
 
     it('renders two <Button /> components', () => {
         const wrapper = shallow(
-            <Filter onChange={() => console.log('on button click')} />,
+            <Filter onChange={jest.fn()} />,
         );
         expect(wrapper.find(Button)).toHaveLength(2);
     });
 
     it('renders two <Switch /> components', () => {
         const wrapper = shallow(
-            <Filter onChange={() => console.log('on button click')} />,
+            <Filter onChange={jest.fn()} />,
         );
         expect(wrapper.find(Switch)).toHaveLength(2);
     });

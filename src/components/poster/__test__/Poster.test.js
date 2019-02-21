@@ -10,7 +10,6 @@ describe('<Poster />', () => {
             name="Alita: Battle Angel"
             click={onPosterClick}
             url="xRWht48C2V8XNfzvPehyClOvDni.jpg"
-            tabIndex={1}
         />
     );
     it('renders correctly', () => {
@@ -32,8 +31,8 @@ describe('<Poster />', () => {
 
     it('simulates click/keydown events', () => {
         const component = shallow(wrapper);
-        component.find('.movie-poster__image').simulate('click');
-        component.find('.movie-poster__image').simulate('keyPress');
+        component.find('button').simulate('click');
+        component.find('button').simulate('keyPress');
         expect(onPosterClick).toHaveBeenCalledTimes(2);
     });
 });

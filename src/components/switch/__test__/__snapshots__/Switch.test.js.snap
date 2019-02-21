@@ -7,7 +7,6 @@ ShallowWrapper {
     id="enLangFilter"
     label="Original Language"
     switchToggle={[MockFunction]}
-    tabIndex={5}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,7 +29,6 @@ ShallowWrapper {
           id="enLangFilter"
           name="enLangFilter"
           onChange={[MockFunction]}
-          tabIndex={5}
           type="checkbox"
         />,
         <label
@@ -56,7 +54,6 @@ ShallowWrapper {
           "id": "enLangFilter",
           "name": "enLangFilter",
           "onChange": [MockFunction],
-          "tabIndex": 5,
           "type": "checkbox",
         },
         "ref": null,
@@ -94,7 +91,6 @@ ShallowWrapper {
             id="enLangFilter"
             name="enLangFilter"
             onChange={[MockFunction]}
-            tabIndex={5}
             type="checkbox"
           />,
           <label
@@ -120,7 +116,6 @@ ShallowWrapper {
             "id": "enLangFilter",
             "name": "enLangFilter",
             "onChange": [MockFunction],
-            "tabIndex": 5,
             "type": "checkbox",
           },
           "ref": null,
