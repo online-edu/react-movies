@@ -26,7 +26,9 @@ Visit [`https://online-edu.github.io/react-movies`](https://online-edu.github.io
 1.  Run linter
     1.  Hit - `npm run lint` or `yarn lint`
 
-Note: If not already, Please install [Create React App](https://github.com/facebookincubator/create-react-app) before you start.
+Note: 
+- If not already, Please install [Create React App](https://github.com/facebookincubator/create-react-app) before you start.
+- More than 4 items you may see in larger screen, it is kept intentionally to improve user experience. 
 
 ## Enhancement
 
